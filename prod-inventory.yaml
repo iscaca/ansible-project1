@@ -1,0 +1,5 @@
+all:
+  hosts: # all ungrouped hosts
+    host2:
+      ansible_host: "10.108.0.4"
+      
