@@ -1,0 +1,17 @@
+---
+- name: Install Some Packages
+  hosts: all
+  vars:
+    packages:
+      - curl
+      - wget
+      - git
+      - tree
+    facts: true
+  gather_facts: "{{ facts }}"
+  tasks:
+    - name: Install Packages
+      when: packages is defined
+      yum:
+        name: "{{ packages }}"
+        state: latest
