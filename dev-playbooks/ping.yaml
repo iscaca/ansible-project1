@@ -10,4 +10,4 @@
 
     - name: Print variables
       debug:
-        msg: "{{ key1 }} {{ key2 }}"
+        msg: "OS = {{ ansible_distribution }}"
